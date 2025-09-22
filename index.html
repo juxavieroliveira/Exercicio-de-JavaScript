@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <title>Exercícios JS </title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Exercícios JavaScript </h1>
+  </header>
+
+  <main>
+    <section>
+      <h2>1. If / Else - Verificador de número positivo ou negativo </h2>
+      <script>
+        let numero = -5;
+        if (numero > 0) 
+        console.log(numero + " é positivo");
+        else if (numero < 0) console.log(numero + " é negativo");
+        else console.log("O número é zero");
+      </script>
+    </section>
+
+    <section>
+      <h2>2. If / Else – Verificar maioridade</h2>
+      <script>
+        let idade = 17;
+        if (idade >= 18) console.log("Maior de idade");
+        else console.log("Menor de idade");
+      </script>
+    </section>
+
+    <section>
+      <h2>3. For – Contagem progressiva </h2>
+      <script>
+        for (let i = 1; i <= 10; i++) console.log(i);
+      </script>
+    </section>
+
+    <section>
+      <h2>4. For – Tabuada </h2>
+      <script>
+        let numeroTabuada = 7;
+        for (let i = 1; i <= 10; i++) console.log(numeroTabuada + " x " + i + " = " + (numeroTabuada * i));
+      </script>
+    </section>
+
+    <section>
+      <h2>5. While – Contagem regressiva </h2>
+     <script>
+        let j = 10;
+        while (j >= 1) { console.log(j); j--; }
+      </script>
+    </section>
+
+    <section>
+      <h2>6. Do...While – Digitação de senha </h2>
+      <script>
+        let senha;
+        do {
+          senha = prompt("Digite a senha (1234) — (console) - Cancel para sair:");
+          if (senha === null) { console.log("Login cancelado pelo usuário."); break; }
+        } while (senha !== "1234");
+        if (senha === "1234") console.log("Acesso permitido!");
+      </script>
+    </section>
+
+    <section>
+      <h2>7. Função – Soma de dois números</h2>
+      <script>
+        function somar(a, b) { return a + b; }
+        console.log("7) somar(5,3) =", somar(5,3));
+      </script>
+    </section>
+
+    <section>
+      <h2>8. Arrow function – Verificar se número é par</h2>
+      <script>
+        const ehPar = (n) => { if (n % 2 === 0) return true; else return false; };
+        console.log("8) ehPar(4) =", ehPar(4));
+        console.log("8) ehPar(7) =", ehPar(7));
+      </script>
+    </section>
+
+    <section>
+      <h2>9. Função + Laço – Somar todos os números até um limite</h2>
+      <script>
+        function somarAte(limite) {
+          let soma = 0;
+          for (let k = 1; k <= limite; k++) soma += k;
+          return soma;
+        }
+        console.log("9) somarAte(5) =", somarAte(5)); // 15
+      </script>
+    </section>
+
+    <section>
+      <h2>10. Função + If/Else – Verificar se um número é primo</h2>
+      <script>
+        function ehPrimo(n) {
+          if (n <= 1) return false;
+          for (let t = 2; t < n; t++) {
+            if (n % t === 0) return false;
+          }
+          return true;
+        }
+        console.log("10) ehPrimo(7) =", ehPrimo(7)); // true
+        console.log("10) ehPrimo(8) =", ehPrimo(8)); // false
+      </script>
+    </section>
+
+     
+
+  </main>
+</body>
+</html>
